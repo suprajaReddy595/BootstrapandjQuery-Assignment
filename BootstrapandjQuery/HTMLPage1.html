@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title></title>
+   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <script>
+        $(document).ready(function () {
+           
+            $("p").click(function () {
+                $(this).hide();
+            });
+            
+            $("#btnAdd").click(function () {
+
+             
+                var x = parseInt($("#txtNo1").val());
+              
+                var y = parseInt($("#txtNo2").val());
+                $("#txtResult").val(x + y);
+            });
+
+            $("#btnSubtract").click(function () {
+
+               
+                var x = parseInt($("#txtNo1").val());
+              
+                var y = parseInt($("#txtNo2").val());
+                $("#txtResult").val(x - y);
+            });
+            $("#btnDivide").click(function () {
+
+
+                var x = parseInt($("#txtNo1").val());
+
+                var y = parseInt($("#txtNo2").val());
+                $("#txtResult").val(x / y);
+            });
+            $("#btnMultiply").click(function () {
+
+
+                var x = parseInt($("#txtNo1").val());
+
+                var y = parseInt($("#txtNo2").val());
+                $("#txtResult").val(x * y);
+            });
+            $("#btnChangeStyle").click(function () {
+                let myElements = $(".form-control");
+                for (let i = 0; i < myElements.length; i++) {
+
+                    myElements[i].style.backgroundColor = "yellow";
+                }
+            });
+
+        });
+
+
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <p> This is a Para </p>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form>
+                    <div class="form-group">
+                        <label for="txtNo1">Enter No1 :</label>
+                        <input type="number" class="form-control" id="txtNo1">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txtNo2">Enter No2 :</label>
+                        <input type="number" class="form-control" id="txtNo2">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txtResult">Result :</label>
+                        <input type="number" class="form-control" id="txtResult">
+                    </div>
+                    <button type="button" class="btn btn-primary" id="btnAdd"> Add </button>
+                    <button type="button" class="btn btn-primary" id="btnSubtract"> Subtract </button>
+                    <button type="button" class="btn btn-primary" id="btnDivide">
+                                               Divide
+                                            </button>
+                    <button type="button" class="btn btn-primary" id="btnMultiply"> Multiply </button>
+                    <button type="button" class="btn btn-success" id="btnChangeStyle"> Change Background color </button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
